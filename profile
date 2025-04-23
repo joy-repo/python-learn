@@ -1,4 +1,4 @@
-I have joined as a VP in ICB team under Daniela Petrassi. I am an HR professional with 6 years of experience across various industries including ITES, Fintech and Pharmaceutical.  
+I have joined as  Vice President in ICB team under Julien P Campana. I am a software Developer with 11 years of experience across various domains.  
 
 As Bangalore site Talent & Culture lead, I am closely involved in devising  and creating a culture of  inclusiveness, diversity and cross-functional team collaboration. 
 
