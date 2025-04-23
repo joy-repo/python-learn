@@ -1,5 +1,3 @@
-I have joined as  Vice President in ICB team under Julien P Campana. I am a software Developer with 11 years of experience across various domains.  
+I’m excited to have joined the ICB team as Vice President, under the leadership of Julien P. Campana. With 11 years of experience in software development across various domains, my focus will be on driving new feature development and strengthening system resilience.
 
-As Bangalore site Talent & Culture lead, I am closely involved in devising  and creating a culture of  inclusiveness, diversity and cross-functional team collaboration. 
-
-I am from the City of Nawabs & Kebabs, Lucknow, so feel free to take opinions on Chikankari!! Looking forward to collectively achieving organization’s mission and creating value.
+Originally from Kolkata—the City of Joy and the home of rosogolla—I’m eager to contribute meaningfully to our shared mission and collaborate in creating lasting value.
