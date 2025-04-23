@@ -62,5 +62,15 @@ You define class attributes directly beneath the first line of the class name an
 **You always need to assign them an initial value.**
 When you create an instance of the class, then Python automatically creates and assigns class attributes to their initial values.
 
+```
+>>> class Dog:
+...     pass
+... 
+>>> Dog()
+<__main__.Dog object at 0x00000257FAE2DF70>
+>>>
+```
+
+
 
 
