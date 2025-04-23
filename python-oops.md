@@ -71,6 +71,7 @@ When you create an instance of the class, then Python automatically creates and 
 >>>
 ```
 
-
+In the output above, you can see that you now have a new Dog object at `0x00000257FAE2DF70`. </br>
+This funny-looking string of letters and numbers is a **memory address** that indicates where Python stores the Dog object in your computer’s memory.
 
 
