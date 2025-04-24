@@ -74,7 +74,36 @@ public class SecretManagerUtil {
 
     private static String getRandomPassword(SecretsManagerClient client) {
         // Implement using SecretsManagerClient.getRandomPassword() if needed
-        return "RandomPassword123!"; // dummy
+       
+        String excludeCharacters = System.getenv("EXCLUDE_CHARACTERS") != null ? System.getenv("EXCLUDE_CHARACTERS") : ":/@\"'\\";
+        int passwordLength = System.getenv("PASSWORD_LENGTH") != null ? Integer.parseInt(System.getenv("PASSWORD_LENGTH")) : 32;
+        boolean excludeNumbers = getEnvironmentBool("EXCLUDE_NUMBERS", false);
+        boolean excludePunctuation = getEnvironmentBool("EXCLUDE_PUNCTUATION", false);
+        boolean excludeUppercase = getEnvironmentBool("EXCLUDE_UPPERCASE", false);
+        boolean excludeLowercase = getEnvironmentBool("EXCLUDE_LOWERCASE", false);
+        boolean requireEachIncludedType = getEnvironmentBool("REQUIRE_EACH_INCLUDED_TYPE", true);
+
+        // Create the request for a random password
+        GetRandomPasswordRequest request = new GetRandomPasswordRequest()
+                .withExcludeCharacters(excludeCharacters)
+                .withPasswordLength(passwordLength)
+                .withExcludeNumbers(excludeNumbers)
+                .withExcludePunctuation(excludePunctuation)
+                .withExcludeUppercase(excludeUppercase)
+                .withExcludeLowercase(excludeLowercase)
+                .withRequireEachIncludedType(requireEachIncludedType);
+
+        // Generate the random password
+        GetRandomPasswordResult result = secretsManager.getRandomPassword(request);
+        return result.getRandomPassword();
+    }
+
+    private static boolean getEnvironmentBool(String variableName, boolean defaultValue) {
+        String value = System.getenv(variableName);
+        if (value == null) {
+            return defaultValue;
+        }
+        return value.equalsIgnoreCase("true") || value.equalsIgnoreCase("1") || value.equalsIgnoreCase("y") || value.equalsIgnoreCase("yes");
     }
 
     private static Map<String, String> fetchInstanceArnFromSystemTags(SecretsManagerClient client, String arn) {
